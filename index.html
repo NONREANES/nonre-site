@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NONRE | Câmeras, automação e casa inteligente</title>
+<meta name="description" content="Instalação de câmeras de segurança (CFTV), automação residencial, iluminação e tomadas inteligentes. Controle sua casa pelo celular ou pela voz com a Alexa.">
+<meta name="theme-color" content="#0A0E14">
+<meta property="og:title" content="NONRE | Segurança & Casa Inteligente">
+<meta property="og:description" content="Câmeras, automação, luzes e tomadas inteligentes. Controle sua casa pelo celular ou pela voz.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<!-- A abertura aparece uma vez por visita -->
+<script>try{if(sessionStorage.getItem("nonre_intro"))document.documentElement.classList.add("sem-intro");sessionStorage.setItem("nonre_intro","1")}catch(e){}</script>
+</head>
+<body>
+
+<!-- ================= ABERTURA (só CSS) ================= -->
+<div class="intro" aria-hidden="true">
+  <div class="intro-conteudo">
+    <svg class="intro-logo" viewBox="0 0 48 48" fill="none">
+      <path class="intro-casa" pathLength="1" d="M6 21.5 24 7l18 14.5V41H6V21.5Z" stroke="#E9EEF5" stroke-width="2.6" stroke-linejoin="round"/>
+      <circle class="intro-lente" pathLength="1" cx="24" cy="28.5" r="7.2" stroke="#E9EEF5" stroke-width="2.4"/>
+      <circle class="intro-luz" cx="24" cy="28.5" r="3" fill="#FFB547"/>
+      <path class="intro-sinal" pathLength="1" d="M17.5 17.2a9.2 9.2 0 0 1 13 0" stroke="#3DDC97" stroke-width="2.2" stroke-linecap="round"/>
+    </svg>
+    <div class="intro-nome"><span>N</span><span>O</span><span>N</span><span>R</span><span>E</span></div>
+    <div class="intro-sub">Segurança &amp; Casa Inteligente</div>
+  </div>
+</div>
+
+<!-- ================= TOPO ================= -->
+<header class="topo" id="topo">
+  <div class="wrap topo-linha">
+    <a href="#inicio" class="marca" aria-label="NONRE — início">
+      <img src="assets/img/logo-mark.svg" alt="" width="36" height="36">
+      <span class="marca-texto"><strong>NONRE</strong><small>Segurança &amp; Casa Inteligente</small></span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#voz">Comando de voz</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn-zap btn-pequeno topo-zap" data-zap="Olá! Vim pelo site da NONRE e quero um orçamento." href="#contato">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-zap"/></svg> Orçamento
+    </a>
+    <button class="menu-btn" id="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+<!-- ================= INÍCIO ================= -->
+<section class="hero" id="inicio">
+  <div class="hero-fundo" aria-hidden="true"></div>
+  <div class="wrap hero-grade">
+    <div class="hero-texto revelar">
+      <span class="etiqueta"><i class="ponto"></i> Câmeras · Automação · Iluminação</span>
+      <h1>Sua casa mais <span class="destaque-luz">segura</span> e <span class="destaque-verde">inteligente</span>.</h1>
+      <p class="hero-sub">Instalamos câmeras de segurança, automação residencial, luzes e tomadas inteligentes. Você controla tudo pelo celular ou pela voz com a Alexa, de onde estiver.</p>
+      <div class="acoes">
+        <a class="btn btn-zap" data-zap="Olá! Vim pelo site da NONRE e quero modernizar minha casa. Pode me passar um orçamento?" href="#contato">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-zap"/></svg> Pedir orçamento no WhatsApp
+        </a>
+        <a class="btn btn-linha" href="#servicos">Ver serviços</a>
+      </div>
+      <ul class="selos">
+        <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg> Instalação limpa e organizada</li>
+        <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg> Configuração no seu celular</li>
+        <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg> Explicação de como usar</li>
+      </ul>
+    </div>
+
+    <!-- Casa interativa -->
+    <div class="demo revelar" style="--atraso:.15s">
+      <div class="casa" id="casa" aria-label="Demonstração interativa de casa inteligente">
+        <div class="telhado"></div>
+        <div class="camera-externa" data-item="camera">
+          <span class="camera-corpo"><i class="camera-led"></i></span>
+          <span class="camera-cone"></span>
+          <span class="rec">● REC</span>
+        </div>
+        <div class="comodos">
+          <div class="comodo" data-item="quarto"><span class="lampada"></span><span class="nome">Quarto</span><span class="cama"></span></div>
+          <div class="comodo" data-item="sala"><span class="lampada"></span><span class="nome">Sala</span><span class="sofa"></span><span class="tv"></span></div>
+          <div class="comodo" data-item="cozinha"><span class="lampada"></span><span class="nome">Cozinha</span><span class="balcao"></span><span class="cafeteira" data-item="tomada"><i></i></span></div>
+          <div class="comodo externo" data-item="jardim"><span class="lampada"></span><span class="nome">Área externa</span><span class="planta"></span></div>
+        </div>
+        <div class="chao"></div>
+      </div>
+
+      <div class="painel" aria-label="Controles">
+        <div class="painel-topo">
+          <span><img src="assets/img/logo-mark.svg" alt="" width="20" height="20"> Minha casa</span>
+          <span class="online"><i></i> online</span>
+        </div>
+        <div class="controles">
+          <button class="ctrl" data-alvo="sala" aria-pressed="false"><span>Luz da sala</span><i class="chave"></i></button>
+          <button class="ctrl" data-alvo="quarto" aria-pressed="false"><span>Luz do quarto</span><i class="chave"></i></button>
+          <button class="ctrl" data-alvo="cozinha" aria-pressed="false"><span>Luz da cozinha</span><i class="chave"></i></button>
+          <button class="ctrl" data-alvo="jardim" aria-pressed="false"><span>Luz externa</span><i class="chave"></i></button>
+          <button class="ctrl" data-alvo="tomada" aria-pressed="false"><span>Tomada · cafeteira</span><i class="chave"></i></button>
+          <button class="ctrl" data-alvo="camera" aria-pressed="true"><span>Câmera externa</span><i class="chave"></i></button>
+        </div>
+        <div class="cenas">
+          <button class="cena" data-cena="cheguei">🗣️ “Alexa, cheguei”</button>
+          <button class="cena" data-cena="noite">🗣️ “Alexa, boa noite”</button>
+        </div>
+        <p class="fala" id="fala" aria-live="polite">Toque nos botões para testar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVIÇOS ================= -->
+<section class="secao" id="servicos">
+  <div class="wrap">
+    <div class="cabeca revelar">
+      <span class="sobretitulo">O que fazemos</span>
+      <h2>Tecnologia instalada do jeito certo</h2>
+      <p>Da câmera na fachada à luz que acende sozinha: projetamos, instalamos e deixamos tudo funcionando no seu celular.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card revelar">
+        <div class="card-icone ic-ambar"><svg viewBox="0 0 24 24"><use href="#i-cam"/></svg></div>
+        <h3>Câmeras de segurança (CFTV)</h3>
+        <p>Câmeras para dentro e fora de casa, com imagem no celular em tempo real e gravação.</p>
+        <ul>
+          <li>Visualização pelo celular, de qualquer lugar</li>
+          <li>Gravação e acesso ao histórico</li>
+          <li>Câmeras com visão noturna</li>
+          <li>Alertas de movimento no celular</li>
+        </ul>
+        <a class="link-zap" data-zap="Olá! Quero um orçamento de instalação de câmeras (CFTV)." href="#contato">Orçar câmeras →</a>
+      </article>
+
+      <article class="card revelar" style="--atraso:.08s">
+        <div class="card-icone ic-verde"><svg viewBox="0 0 24 24"><use href="#i-casa"/></svg></div>
+        <h3>Automação residencial</h3>
+        <p>Sua casa respondendo a horários, presença e comandos de voz, sem complicação.</p>
+        <ul>
+          <li>Integração com Alexa e Google Assistente</li>
+          <li>Rotinas automáticas (ao acordar, sair, dormir)</li>
+          <li>Tudo em um único aplicativo</li>
+          <li>Controle à distância</li>
+        </ul>
+        <a class="link-zap" data-zap="Olá! Quero automatizar minha casa. Pode me ajudar?" href="#contato">Quero automatizar →</a>
+      </article>
+
+      <article class="card revelar" style="--atraso:.16s">
+        <div class="card-icone ic-ambar"><svg viewBox="0 0 24 24"><use href="#i-luz"/></svg></div>
+        <h3>Iluminação inteligente</h3>
+        <p>Lâmpadas, fitas de LED e interruptores inteligentes para criar o clima certo em cada ambiente.</p>
+        <ul>
+          <li>Ligue e desligue pela voz ou pelo celular</li>
+          <li>Ajuste de intensidade e cor</li>
+          <li>Horários programados</li>
+          <li>Simulação de presença em viagens</li>
+        </ul>
+        <a class="link-zap" data-zap="Olá! Quero instalar iluminação inteligente." href="#contato">Orçar iluminação →</a>
+      </article>
+
+      <article class="card revelar" style="--atraso:.24s">
+        <div class="card-icone ic-verde"><svg viewBox="0 0 24 24"><use href="#i-tomada"/></svg></div>
+        <h3>Tomadas inteligentes</h3>
+        <p>Transforme aparelhos comuns em inteligentes: cafeteira, ventilador, abajur, aquecedor…</p>
+        <ul>
+          <li>Ligue e desligue de qualquer lugar</li>
+          <li>Agendamento por horário</li>
+          <li>Evite aparelhos esquecidos ligados</li>
+          <li>Comando de voz pela Alexa</li>
+        </ul>
+        <a class="link-zap" data-zap="Olá! Quero instalar tomadas inteligentes." href="#contato">Orçar tomadas →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VOZ ================= -->
+<section class="secao secao-escura" id="voz">
+  <div class="wrap voz-grade">
+    <div class="revelar">
+      <span class="sobretitulo">Comando de voz</span>
+      <h2>É só falar.<br>A casa obedece.</h2>
+      <p>Configuramos rotinas na Alexa para que uma frase faça várias coisas ao mesmo tempo. Também funciona pelo celular, com um toque.</p>
+      <a class="btn btn-zap" data-zap="Olá! Quero controlar minha casa pela Alexa. Como funciona?" href="#contato">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-zap"/></svg> Quero isso na minha casa
+      </a>
+    </div>
+    <div class="falas">
+      <div class="bolha revelar"><strong>“Alexa, bom dia”</strong><span>Acende as luzes do quarto devagar e liga a cafeteira.</span></div>
+      <div class="bolha revelar" style="--atraso:.1s"><strong>“Alexa, estou saindo”</strong><span>Apaga todas as luzes e desliga as tomadas esquecidas.</span></div>
+      <div class="bolha revelar" style="--atraso:.2s"><strong>“Alexa, cheguei”</strong><span>Acende a entrada e a sala na hora em que você abre a porta.</span></div>
+      <div class="bolha revelar" style="--atraso:.3s"><strong>“Alexa, boa noite”</strong><span>Apaga a casa e deixa só a luz externa acesa.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMO FUNCIONA ================= -->
+<section class="secao" id="como-funciona">
+  <div class="wrap">
+    <div class="cabeca revelar">
+      <span class="sobretitulo">Como funciona</span>
+      <h2>Do primeiro contato à casa funcionando</h2>
+    </div>
+    <ol class="passos">
+      <li class="revelar"><span class="num">1</span><h3>Conversa</h3><p>Você conta pelo WhatsApp o que quer: câmeras, luzes, tomadas ou tudo junto.</p></li>
+      <li class="revelar" style="--atraso:.1s"><span class="num">2</span><h3>Projeto</h3><p>Avaliamos o local e indicamos os equipamentos certos para a sua casa e o seu orçamento.</p></li>
+      <li class="revelar" style="--atraso:.2s"><span class="num">3</span><h3>Instalação</h3><p>Instalação caprichada, com fios organizados e tudo testado na hora.</p></li>
+      <li class="revelar" style="--atraso:.3s"><span class="num">4</span><h3>Pronto para usar</h3><p>Configuramos os apps e a Alexa no seu celular e explicamos como usar cada recurso.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= BENEFÍCIOS ================= -->
+<section class="secao secao-faixa">
+  <div class="wrap beneficios">
+    <div class="beneficio revelar"><svg viewBox="0 0 24 24"><use href="#i-escudo"/></svg><div><strong>Mais segurança</strong><span>Veja sua casa de qualquer lugar.</span></div></div>
+    <div class="beneficio revelar" style="--atraso:.08s"><svg viewBox="0 0 24 24"><use href="#i-raio"/></svg><div><strong>Economia</strong><span>Nada fica ligado sem necessidade.</span></div></div>
+    <div class="beneficio revelar" style="--atraso:.16s"><svg viewBox="0 0 24 24"><use href="#i-sofa"/></svg><div><strong>Conforto</strong><span>A casa trabalha por você.</span></div></div>
+    <div class="beneficio revelar" style="--atraso:.24s"><svg viewBox="0 0 24 24"><use href="#i-chave"/></svg><div><strong>Suporte</strong><span>Ajuda quando precisar.</span></div></div>
+  </div>
+</section>
+
+<!-- ================= DÚVIDAS ================= -->
+<section class="secao" id="duvidas">
+  <div class="wrap estreito">
+    <div class="cabeca revelar">
+      <span class="sobretitulo">Dúvidas frequentes</span>
+      <h2>Perguntas que todo mundo faz</h2>
+    </div>
+    <div class="faq revelar">
+      <details><summary>Preciso ter internet em casa?</summary><p>Sim. Para ver as câmeras e controlar a casa fora de casa, é preciso ter internet (Wi-Fi). Se o sinal não chega bem em algum cômodo, indicamos a melhor solução.</p></details>
+      <details><summary>Preciso ter uma Alexa?</summary><p>Não. Tudo pode ser controlado pelo aplicativo no celular. A Alexa (ou o Google Assistente) é um extra para quem quer usar comandos de voz.</p></details>
+      <details><summary>Consigo ver as câmeras quando estou fora?</summary><p>Sim. As imagens ficam disponíveis no seu celular, ao vivo e gravadas, de qualquer lugar com internet.</p></details>
+      <details><summary>Dá para começar com pouco e aumentar depois?</summary><p>Dá, sim. Você pode começar com algumas luzes ou uma câmera e ir ampliando. Já planejamos pensando nisso.</p></details>
+      <details><summary>Quanto tempo leva a instalação?</summary><p>Depende do tamanho do projeto. Na conversa inicial já passamos uma estimativa de prazo junto com o orçamento.</p></details>
+      <details><summary>Vocês atendem a minha região?</summary><p>Chame no WhatsApp e informe seu bairro e cidade que confirmamos na hora.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTATO ================= -->
+<section class="secao" id="contato">
+  <div class="wrap">
+    <div class="cta revelar">
+      <div class="cta-texto">
+        <h2>Vamos modernizar a sua casa?</h2>
+        <p>Conte o que você precisa e receba um orçamento sem compromisso.</p>
+        <a class="btn btn-zap btn-grande" data-zap="Olá! Vim pelo site da NONRE e quero um orçamento." href="#contato">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-zap"/></svg> Chamar no WhatsApp
+        </a>
+        <p class="aviso-zap" id="aviso-zap" hidden>Número do WhatsApp ainda não configurado (arquivo <code>assets/js/main.js</code>).</p>
+      </div>
+      <img class="cta-marca" src="assets/img/logo-mark.svg" alt="" aria-hidden="true">
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap rodape-linha">
+    <a href="#inicio" class="marca"><img src="assets/img/logo-mark.svg" alt="" width="28" height="28"><span class="marca-texto"><strong>NONRE</strong><small>Segurança &amp; Casa Inteligente</small></span></a>
+    <p>© <span id="ano"></span> NONRE. Alexa é marca da Amazon; Google Assistente é marca do Google. Usadas apenas para indicar compatibilidade.</p>
+  </div>
+</footer>
+
+<a class="zap-flutuante" data-zap="Olá! Vim pelo site da NONRE e quero um orçamento." href="#contato" aria-label="Conversar no WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-zap"/></svg>
+</a>
+
+<!-- ================= ÍCONES ================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-zap" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm4.53 11.99c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h12l3 3v4l-3 3H3z"/><circle cx="9" cy="12" r="2.5"/><path d="M18 11l3-1.5v5L18 13"/></g></symbol>
+  <symbol id="i-casa" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7v9H3z"/><path d="M9 20v-5h6v5"/><path d="M8.5 9.5a5 5 0 0 1 7 0"/></g></symbol>
+  <symbol id="i-luz" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.4.3.6.8.6 1.2v1h6v-1c0-.4.2-.9.6-1.2A6 6 0 0 0 12 3Z"/></g></symbol>
+  <symbol id="i-tomada" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M9.5 9v2M14.5 9v2M9 15h6"/></g></symbol>
+  <symbol id="i-escudo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></g></symbol>
+  <symbol id="i-raio" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-sofa" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3"/><path d="M3 13a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v5H3z"/></g></symbol>
+  <symbol id="i-chave" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8V21h3.2l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.4-.6-.6-2.4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+</svg>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
