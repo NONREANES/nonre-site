@@ -306,5 +306,22 @@ h2 { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 4vw, 
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
 
+/* ---------- Para quem fazemos ---------- */
+.segmentos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.seg { display: flex; flex-direction: column; padding: 26px 24px; border-radius: var(--raio); background: var(--superficie); border: 1px solid var(--linha); transition: transform 0.4s var(--suave-ease), border-color 0.3s; }
+.seg:hover { transform: translateY(-5px); border-color: rgba(61, 220, 151, 0.4); }
+.seg-icone { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; margin-bottom: 18px; background: rgba(61, 220, 151, 0.1); color: var(--verde); }
+.seg-icone svg { width: 25px; height: 25px; }
+.seg h3 { font-family: var(--display); font-size: 19px; }
+.seg p { margin: 10px 0 20px; color: var(--suave); font-size: 15px; }
+.seg-mais { justify-content: center; background: linear-gradient(135deg, rgba(255, 181, 71, 0.1), rgba(61, 220, 151, 0.08)); border-style: dashed; }
+.seg-mais .btn { align-self: flex-start; }
+.tambem { margin-top: 36px; padding: 24px 28px; border-radius: var(--raio); border: 1px solid var(--linha); background: rgba(255, 255, 255, 0.02); display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+.tambem-titulo { font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ambar); white-space: nowrap; }
+.tambem ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.tambem li { padding: 7px 14px; border-radius: 999px; background: var(--superficie-2); border: 1px solid var(--linha); font-size: 14px; }
+@media (max-width: 1080px) { .segmentos { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .segmentos { grid-template-columns: 1fr; } }
+
 /* Contato logo após as dúvidas: sem espaço duplicado */
 #contato { padding-top: 0; }

@@ -1,10 +1,10 @@
-# NONRE — Segurança & Casa Inteligente
+# NONRE — Segurança & Automação
 
-Site de **instalação de câmeras (CFTV), automação residencial, iluminação e tomadas inteligentes**, com controle pelo celular e pela Alexa.
+Site de **câmeras de segurança (CFTV) e automação para casas, hotéis, lojas, academias e escritórios**: iluminação, tomadas inteligentes, Alexa, fechaduras, ar-condicionado e mais, com controle pelo celular e pela voz.
 
 - Abertura animada feita só com CSS (aparece uma vez por visita)
 - Casa interativa no topo: o visitante liga luzes, tomada e câmera e testa as cenas "Alexa, cheguei" e "Alexa, boa noite"
-- Seções: Serviços, Comando de voz, Como funciona, Benefícios, Dúvidas e Contato
+- Seções: Serviços, Para quem fazemos (casas, hotéis, lojas, academias, escritórios), Comando de voz, Como funciona, Benefícios, Dúvidas e Contato
 - Todos os botões abrem o WhatsApp com uma mensagem pronta
 - Site estático (HTML + CSS + JS): sem banco de dados e sem build
 
